@@ -1,7 +1,10 @@
-# CodeOrigin.Ai — Company Profile Website
+# CodeOrigin.Ai — Premium Enterprise Portfolio Website
 
-A modern, responsive company profile front-end for **CodeOrigin.Ai**, a next-gen technology startup
-specializing in **Advanced Java, Advanced Python, Cloud DevOps, Artificial Intelligence and Databases**.
+**Building Intelligent Software For The Future.**
+
+A premium, enterprise-grade, highly interactive **3D company portfolio** for **CodeOrigin.Ai** — a technology
+company specializing in **Web Applications, Mobile Applications, Cloud Infrastructure, Artificial Intelligence,
+Enterprise Software Solutions** and **Modern DevOps Practices**.
 
 ![Tech](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![Tech](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -9,63 +12,62 @@ specializing in **Advanced Java, Advanced Python, Cloud DevOps, Artificial Intel
 
 ## ✨ Features
 
-- **Modern dark AI-startup theme** with gradient accents, glassmorphism and glowing orbs
-- **Fully responsive** — looks great on desktop, tablet and mobile
-- **Animated hero** with floating background orbs and a live code card
-- **Scroll-reveal animations** and **animated stat counters**
-- **Sticky navbar** with scroll state + slide-in mobile menu
-- **Sections:** Hero · About · Services · Projects · Leadership · Contact
-- **Contact form** with client-side validation
-- **Zero dependencies / no build step** — pure HTML, CSS and JavaScript
+- **Modern dark theme with glassmorphism** and animated multi-color gradients
+- **Premium 3D effects** — interactive tilt cards, parallax hero logo stage, orbiting tech badges
+- **Interactive floating particles** with mouse repulsion and connection lines (HTML canvas)
+- **Animated gradient backgrounds** (drifting aurora orbs + grid overlay)
+- **Glowing effects** around key sections and the animated company logo
+- **Animated counters**, **scroll-reveal animations**, **loading animation** and smooth scrolling
+- **Fully mobile responsive**
+- **Pure HTML, CSS & JavaScript** — no frameworks, no build step
 
-## 🧑‍💼 Leadership
+## 🧩 Sections
 
-| Name | Role |
-|------|------|
-| **Raghavanedra N** | Chief Executive Officer (CEO) |
-| **Rakshith S** | CFO & CMO |
-| **Ramesh** | Chief Technology Officer (CTO) |
+Hero · Company Overview (Vision / Mission / Founded / Core Values) · Team Strength (20-member directory) ·
+Projects · Tech Stack · Infrastructure Pipeline · Services · Achievements · Why Choose Us · Contact · Footer
 
-> Backed by a talented team of 20+ engineers, designers and innovators.
+## 👥 Team Directory (Dynamic)
+
+The team table is rendered from a **dynamic data array** (`TEAM`) in `js/main.js`, so it can be
+updated easily. Edit the `name`, `role` and `email` fields and the table re-renders automatically.
+
+The same dynamic-data approach powers the **Projects**, **Tech Stack**, **Services**, **Infrastructure**
+and **Why Choose Us** sections.
 
 ## 📁 Project Structure
 
 ```
 CodeOrigin.Ai/
-├── index.html        # Page markup & content
+├── index.html        # Page markup & section containers
 ├── css/
-│   └── styles.css    # All styling & responsive design
+│   └── styles.css    # Dark glassmorphism theme, 3D effects, animations
 ├── js/
-│   └── main.js       # Interactivity (nav, reveals, counters, form)
+│   └── main.js       # Dynamic data, particles, tilt, counters, reveals
 └── README.md
 ```
 
 ## 🚀 Getting Started
 
-No installation required. Simply open the site in a browser:
-
 ```bash
-# Option 1: open directly
-open index.html
-
-# Option 2: serve locally (recommended)
+# Serve locally (recommended)
 python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-### Deploy with GitHub Pages
-
-1. Push this repository to GitHub.
-2. Go to **Settings → Pages**.
-3. Set the source branch to your branch and `/ (root)` folder.
-4. Your site will be live at `https://<username>.github.io/CodeOrigin.Ai/`.
-
 ## 🎨 Customization
 
 - **Colors & theme:** edit the CSS variables at the top of `css/styles.css` (`:root`).
-- **Content:** edit text directly in `index.html`.
-- **Stats:** change the `data-count` and `data-suffix` attributes on `.stat-num` elements.
+- **Team / Projects / Services / Tech:** edit the data arrays at the top of `js/main.js`.
+- **Counters:** change the `data-count` and `data-suffix` attributes in `index.html`.
+
+## 📞 Contact
+
+- **Company:** CodeOrigin.Ai
+- **Email:** hello@codeoriginai.com
+- **Phone:** 078921 77297
+- **Website:** [www.codeoriginai.com](https://www.codeoriginai.com)
+- **Location:** Kotla Arcade, opposite Gurukula English Medium School, CK Pura, Chitradurga, Karnataka 577501
 
 ---
 
-© CodeOrigin.Ai — Engineering the future with code & intelligence.
+© CodeOrigin.Ai — Building Intelligent Software For The Future.

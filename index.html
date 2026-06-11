@@ -3,38 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CodeOrigin.Ai — a next-gen technology startup engineering the future with Advanced Java, Advanced Python, Cloud DevOps, AI and Databases." />
-  <meta name="theme-color" content="#0a0e1a" />
-  <title>CodeOrigin.Ai — Engineering the Future with AI</title>
+  <meta name="description" content="CodeOrigin.Ai — an enterprise technology company building intelligent software for the future. Web, Mobile, Cloud, AI, Enterprise Software and DevOps." />
+  <meta name="theme-color" content="#05060f" />
+  <title>CodeOrigin.Ai — Building Intelligent Software For The Future</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%A1</text></svg>" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">
+      <span class="loader-mark">
+        <svg viewBox="0 0 140 80" width="58" height="33" role="img" aria-label="CodeOrigin.ai logo">
+          <defs>
+            <linearGradient id="coGoldLoad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f7e3a1"/>
+              <stop offset="45%" stop-color="#e6c25a"/>
+              <stop offset="100%" stop-color="#b8860b"/>
+            </linearGradient>
+          </defs>
+          <path d="M54 9 L26 9 L4 40 L26 71 L54 71 L32 40 Z" fill="url(#coGoldLoad)"/>
+          <path d="M118 23 A21 21 0 1 0 118 57" fill="none" stroke="url(#coGoldLoad)" stroke-width="9" stroke-linecap="round"/>
+          <g fill="url(#coGoldLoad)" stroke="url(#coGoldLoad)" stroke-width="3.5" stroke-linecap="round">
+            <line x1="104" y1="40" x2="124" y2="40"/><circle cx="130" cy="40" r="4.5" stroke="none"/>
+            <line x1="108" y1="30" x2="120" y2="24"/><circle cx="125" cy="21" r="4.5" stroke="none"/>
+            <line x1="108" y1="50" x2="120" y2="56"/><circle cx="125" cy="59" r="4.5" stroke="none"/>
+          </g>
+        </svg>
+      </span>
+      <span class="loader-name"><span class="brand-gold">Code</span>Origin<span class="brand-dot">.ai</span></span>
+    </div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- ============ GLOBAL BACKGROUND ============ -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+    <div class="bg-grid"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
   <!-- ============ NAVBAR ============ -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#home" class="brand">
         <span class="brand-mark">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
+          <svg class="logo-mark" viewBox="0 0 140 80" width="46" height="26" role="img" aria-label="CodeOrigin.ai logo">
+            <defs>
+              <linearGradient id="coGoldNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f7e3a1"/>
+                <stop offset="45%" stop-color="#e6c25a"/>
+                <stop offset="100%" stop-color="#b8860b"/>
+              </linearGradient>
+            </defs>
+            <path d="M54 9 L26 9 L4 40 L26 71 L54 71 L32 40 Z" fill="url(#coGoldNav)"/>
+            <path d="M118 23 A21 21 0 1 0 118 57" fill="none" stroke="url(#coGoldNav)" stroke-width="9" stroke-linecap="round"/>
+            <g fill="url(#coGoldNav)" stroke="url(#coGoldNav)" stroke-width="3.5" stroke-linecap="round">
+              <line x1="104" y1="40" x2="124" y2="40"/><circle cx="130" cy="40" r="4.5" stroke="none"/>
+              <line x1="108" y1="30" x2="120" y2="24"/><circle cx="125" cy="21" r="4.5" stroke="none"/>
+              <line x1="108" y1="50" x2="120" y2="56"/><circle cx="125" cy="59" r="4.5" stroke="none"/>
+            </g>
           </svg>
         </span>
-        <span class="brand-text">CodeOrigin<span class="brand-ai">.Ai</span></span>
+        <span class="brand-text"><span class="brand-gold">Code</span>Origin<span class="brand-dot">.ai</span></span>
       </a>
 
       <nav class="nav-links" id="navLinks">
         <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#services" class="nav-link">Services</a>
+        <a href="#about" class="nav-link">Company</a>
+        <a href="#team" class="nav-link">Team</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#team" class="nav-link">Leadership</a>
+        <a href="#stack" class="nav-link">Tech</a>
+        <a href="#services" class="nav-link">Services</a>
         <a href="#contact" class="nav-link nav-cta">Contact</a>
       </nav>
 
@@ -46,129 +94,184 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="home">
-    <div class="hero-bg" aria-hidden="true">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-      <div class="grid-overlay"></div>
-    </div>
-
     <div class="container hero-inner">
       <div class="hero-content reveal">
-        <span class="pill">⚡ Next-Gen Technology Startup</span>
+        <span class="pill"><span class="pulse-dot"></span> Enterprise AI &amp; Software Company</span>
         <h1 class="hero-title">
-          Engineering the <span class="gradient-text">Future</span><br />
-          with Code &amp; Intelligence
+          Building <span class="gradient-text">Intelligent Software</span><br />
+          For The Future
         </h1>
         <p class="hero-sub">
-          We are <strong>CodeOrigin.Ai</strong> — a passionate team building advanced
-          software powered by <strong>Advanced Java</strong>, <strong>Advanced Python</strong>,
-          <strong>Cloud DevOps</strong>, <strong>Artificial Intelligence</strong> and modern
-          <strong>Database</strong> systems that scale.
+          <strong>CodeOrigin.Ai</strong> is a technology company specializing in
+          <strong>Web Applications</strong>, <strong>Mobile Applications</strong>,
+          <strong>Cloud Infrastructure</strong>, <strong>Artificial Intelligence</strong>,
+          <strong>Enterprise Software Solutions</strong>, and <strong>Modern DevOps Practices</strong>.
         </p>
         <div class="hero-actions">
-          <a href="#services" class="btn btn-primary">Explore Our Work</a>
+          <a href="#projects" class="btn btn-primary">Explore Our Work</a>
           <a href="#contact" class="btn btn-ghost">Get in Touch →</a>
         </div>
 
-        <div class="hero-stack">
-          <span>Trusted stack:</span>
-          <div class="chip-row">
-            <span class="chip">Java</span>
-            <span class="chip">Python</span>
-            <span class="chip">Cloud</span>
-            <span class="chip">DevOps</span>
-            <span class="chip">AI / ML</span>
-            <span class="chip">Databases</span>
+        <div class="hero-metrics">
+          <div class="metric glass">
+            <div class="metric-num" data-count="20" data-suffix="+">0</div>
+            <div class="metric-label">Team Strength</div>
+          </div>
+          <div class="metric glass">
+            <div class="metric-num" data-count="5" data-suffix="+">0</div>
+            <div class="metric-label">Projects Delivered</div>
+          </div>
+          <div class="metric glass">
+            <div class="metric-num" data-count="35" data-suffix="+">0</div>
+            <div class="metric-label">Technologies Used</div>
+          </div>
+          <div class="metric glass">
+            <div class="metric-num" data-count="100" data-suffix="%">0</div>
+            <div class="metric-label">Cloud Infrastructure</div>
           </div>
         </div>
       </div>
 
       <div class="hero-visual reveal">
-        <div class="code-card">
-          <div class="code-top">
-            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            <span class="code-file">origin.ai</span>
+        <div class="logo-stage">
+          <div class="logo-core tilt">
+            <svg class="logo-glyph-svg" viewBox="0 0 140 80" width="130" height="74" role="img" aria-label="CodeOrigin.ai logo">
+              <defs>
+                <linearGradient id="coGoldHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f7e3a1"/>
+                  <stop offset="45%" stop-color="#e6c25a"/>
+                  <stop offset="100%" stop-color="#b8860b"/>
+                </linearGradient>
+              </defs>
+              <path d="M54 9 L26 9 L4 40 L26 71 L54 71 L32 40 Z" fill="url(#coGoldHero)"/>
+              <path d="M118 23 A21 21 0 1 0 118 57" fill="none" stroke="url(#coGoldHero)" stroke-width="9" stroke-linecap="round"/>
+              <g fill="url(#coGoldHero)" stroke="url(#coGoldHero)" stroke-width="3.5" stroke-linecap="round">
+                <line x1="104" y1="40" x2="124" y2="40"/><circle cx="130" cy="40" r="4.5" stroke="none"/>
+                <line x1="108" y1="30" x2="120" y2="24"/><circle cx="125" cy="21" r="4.5" stroke="none"/>
+                <line x1="108" y1="50" x2="120" y2="56"/><circle cx="125" cy="59" r="4.5" stroke="none"/>
+              </g>
+            </svg>
+            <span class="logo-label"><span class="brand-gold">Code</span>Origin<span class="brand-dot">.ai</span></span>
           </div>
-          <pre class="code-body"><code><span class="c-key">class</span> <span class="c-cls">CodeOrigin</span>:
-    <span class="c-fn">def</span> <span class="c-fn2">build</span>(self):
-        <span class="c-key">return</span> {
-            <span class="c-str">"java"</span>: <span class="c-num">"advanced"</span>,
-            <span class="c-str">"python"</span>: <span class="c-num">"advanced"</span>,
-            <span class="c-str">"cloud"</span>: <span class="c-num">"devops"</span>,
-            <span class="c-str">"ai"</span>: <span class="c-num">"production"</span>,
-            <span class="c-str">"data"</span>: <span class="c-num">"scalable"</span>,
-        }
-
-<span class="c-com"># Innovation, delivered.</span>
-<span class="c-cls">CodeOrigin</span>().<span class="c-fn2">build</span>()</code></pre>
+          <div class="orbit orbit-1"><span class="orbit-chip">AI</span></div>
+          <div class="orbit orbit-2"><span class="orbit-chip">Cloud</span></div>
+          <div class="orbit orbit-3"><span class="orbit-chip">DevOps</span></div>
+          <span class="float-icon fi-1">⚛️</span>
+          <span class="float-icon fi-2">☁️</span>
+          <span class="float-icon fi-3">🤖</span>
+          <span class="float-icon fi-4">🐳</span>
+          <span class="float-icon fi-5">🗄️</span>
         </div>
       </div>
     </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
   </section>
 
-  <!-- ============ STATS ============ -->
-  <section class="stats">
-    <div class="container stats-grid">
-      <div class="stat reveal">
-        <div class="stat-num" data-count="20" data-suffix="+">0</div>
-        <div class="stat-label">Talented Team Members</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat-num" data-count="12" data-suffix="+">0</div>
-        <div class="stat-label">Projects in Queue</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat-num" data-count="5" data-suffix="">0</div>
-        <div class="stat-label">Core Technologies</div>
-      </div>
-      <div class="stat reveal">
-        <div class="stat-num" data-count="100" data-suffix="%">0</div>
-        <div class="stat-label">Passion for Innovation</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
+  <!-- ============ COMPANY OVERVIEW ============ -->
   <section class="section about" id="about">
-    <div class="container about-grid">
-      <div class="about-text reveal">
-        <span class="eyebrow">Who We Are</span>
-        <h2 class="section-title">A startup born to build <span class="gradient-text">intelligent software</span></h2>
-        <p>
-          CodeOrigin.Ai is a fast-growing technology startup of around <strong>20 driven engineers,
-          designers and strategists</strong>. We turn ambitious ideas into reliable, production-grade
-          products using cutting-edge engineering and applied AI.
-        </p>
-        <p>
-          From enterprise-grade <strong>Advanced Java</strong> backends to intelligent
-          <strong>Python &amp; AI</strong> systems, automated <strong>Cloud DevOps</strong> pipelines and
-          high-performance <strong>databases</strong> — we own the full journey from idea to deployment.
-        </p>
-        <ul class="check-list">
-          <li>Product engineering &amp; modern architecture</li>
-          <li>AI / ML model development &amp; integration</li>
-          <li>Cloud-native, automated delivery pipelines</li>
-          <li>Scalable, secure data platforms</li>
-        </ul>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Company Overview</span>
+        <h2 class="section-title">Who is <span class="gradient-text">CodeOrigin.Ai</span></h2>
+        <p class="section-lead">Founded in 2024, CodeOrigin.Ai engineers reliable, intelligent and scalable software for businesses worldwide.</p>
       </div>
 
-      <div class="about-cards reveal">
-        <div class="mini-card">
-          <div class="mini-icon">🎯</div>
-          <h4>Our Mission</h4>
-          <p>Empower businesses with reliable, intelligent technology that creates real impact.</p>
+      <div class="overview-grid">
+        <div class="ov-card glass tilt reveal">
+          <div class="ov-icon">🚀</div>
+          <h3>Our Vision</h3>
+          <p>To become a trusted origin point for innovation in AI-driven, enterprise-grade software engineering.</p>
         </div>
-        <div class="mini-card">
-          <div class="mini-icon">🚀</div>
-          <h4>Our Vision</h4>
-          <p>To become a trusted origin point for innovation in AI-driven software engineering.</p>
+        <div class="ov-card glass tilt reveal">
+          <div class="ov-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>Empower organizations with intelligent, secure and scalable technology that delivers measurable impact.</p>
         </div>
-        <div class="mini-card">
-          <div class="mini-icon">💡</div>
-          <h4>Our Values</h4>
-          <p>Curiosity, craftsmanship, ownership, and a relentless focus on quality.</p>
+        <div class="ov-card glass tilt reveal">
+          <div class="ov-icon">🏛️</div>
+          <h3>Founded</h3>
+          <p>Established in 2024 and headquartered in Chitradurga, Karnataka — engineering software for a global market.</p>
         </div>
+      </div>
+
+      <div class="values-head reveal">
+        <h3 class="values-title">Our Core <span class="gradient-text">Values</span></h3>
+      </div>
+      <div class="values-grid">
+        <div class="value-chip glass reveal"><span>💡</span> Innovation</div>
+        <div class="value-chip glass reveal"><span>📈</span> Scalability</div>
+        <div class="value-chip glass reveal"><span>🔒</span> Security</div>
+        <div class="value-chip glass reveal"><span>⚡</span> Performance</div>
+        <div class="value-chip glass reveal"><span>🤝</span> Customer Success</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM STRENGTH ============ -->
+  <section class="section team" id="team">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Team Strength</span>
+        <h2 class="section-title">Total Team Strength: <span class="gradient-text" id="teamCount">20</span> Members</h2>
+        <p class="section-lead">A multidisciplinary team of engineers, designers and strategists powering CodeOrigin.Ai.</p>
+      </div>
+
+      <div class="table-wrap glass reveal">
+        <table class="team-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Employee Name</th>
+              <th>Designation</th>
+              <th>Email Address</th>
+            </tr>
+          </thead>
+          <tbody id="teamTableBody">
+            <!-- rows injected by JS (dynamic, easy to update) -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Portfolio</span>
+        <h2 class="section-title">Enterprise <span class="gradient-text">Projects</span></h2>
+        <p class="section-lead">Production-grade platforms engineered, scaled and deployed by our team.</p>
+      </div>
+      <div class="project-grid" id="projectGrid">
+        <!-- cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section class="section stack" id="stack">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Technology Stack</span>
+        <h2 class="section-title">Built With a <span class="gradient-text">Modern Stack</span></h2>
+        <p class="section-lead">Categorized expertise across the full engineering spectrum.</p>
+      </div>
+      <div class="stack-grid" id="stackGrid">
+        <!-- categories injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INFRASTRUCTURE ============ -->
+  <section class="section infra" id="infra">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Infrastructure</span>
+        <h2 class="section-title">Our Deployment <span class="gradient-text">Pipeline</span></h2>
+        <p class="section-lead">From code to production — a fully automated, cloud-native delivery flow.</p>
+      </div>
+      <div class="pipeline" id="pipeline">
+        <!-- steps injected by JS -->
       </div>
     </div>
   </section>
@@ -178,156 +281,57 @@
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">What We Do</span>
-        <h2 class="section-title">Our Core <span class="gradient-text">Technologies</span></h2>
-        <p class="section-lead">Deep expertise across the modern technology stack — engineered to scale.</p>
+        <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+        <p class="section-lead">End-to-end engineering capabilities for ambitious products.</p>
       </div>
-
-      <div class="service-grid">
-        <article class="service-card reveal">
-          <div class="service-icon">☕</div>
-          <h3>Advanced Java</h3>
-          <p>Enterprise backends, microservices and high-throughput systems with Spring Boot, JPA and reactive architectures.</p>
-          <div class="tag-row"><span>Spring Boot</span><span>Microservices</span><span>APIs</span></div>
-        </article>
-
-        <article class="service-card reveal">
-          <div class="service-icon">🐍</div>
-          <h3>Advanced Python</h3>
-          <p>Data engineering, automation and intelligent backends powered by FastAPI, async pipelines and clean architecture.</p>
-          <div class="tag-row"><span>FastAPI</span><span>Automation</span><span>Data</span></div>
-        </article>
-
-        <article class="service-card reveal">
-          <div class="service-icon">🤖</div>
-          <h3>Artificial Intelligence</h3>
-          <p>Machine learning, deep learning and generative AI solutions — from model training to real-world deployment.</p>
-          <div class="tag-row"><span>ML / DL</span><span>GenAI</span><span>LLMs</span></div>
-        </article>
-
-        <article class="service-card reveal">
-          <div class="service-icon">☁️</div>
-          <h3>Cloud &amp; DevOps</h3>
-          <p>CI/CD automation, containerization and infrastructure-as-code for fast, reliable and secure delivery.</p>
-          <div class="tag-row"><span>Docker</span><span>Kubernetes</span><span>CI/CD</span></div>
-        </article>
-
-        <article class="service-card reveal">
-          <div class="service-icon">🗄️</div>
-          <h3>Databases</h3>
-          <p>Scalable SQL &amp; NoSQL data platforms, optimization and analytics that keep your data fast and reliable.</p>
-          <div class="tag-row"><span>SQL</span><span>NoSQL</span><span>Analytics</span></div>
-        </article>
-
-        <article class="service-card reveal">
-          <div class="service-icon">🧩</div>
-          <h3>Product Engineering</h3>
-          <p>End-to-end product design and development — taking your concept from prototype to a polished launch.</p>
-          <div class="tag-row"><span>UX</span><span>Full-stack</span><span>Launch</span></div>
-        </article>
+      <div class="service-grid" id="serviceGrid">
+        <!-- cards injected by JS -->
       </div>
     </div>
   </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section class="section projects" id="projects">
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section class="section achievements" id="achievements">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">In The Pipeline</span>
-        <h2 class="section-title">Projects <span class="gradient-text">Under Way</span></h2>
-        <p class="section-lead">A snapshot of the innovative work currently in our queue.</p>
+        <span class="eyebrow">Milestones</span>
+        <h2 class="section-title">Our <span class="gradient-text">Achievements</span></h2>
       </div>
-
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <div class="project-status status-progress">In Progress</div>
-          <h3>AI Insight Engine</h3>
-          <p>An LLM-powered analytics platform that turns raw business data into actionable insights.</p>
-          <div class="tag-row"><span>Python</span><span>AI</span><span>Cloud</span></div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-status status-queue">In Queue</div>
-          <h3>Enterprise Java Suite</h3>
-          <p>A modular microservices platform for scalable enterprise operations and integrations.</p>
-          <div class="tag-row"><span>Java</span><span>Spring</span><span>Microservices</span></div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-status status-queue">In Queue</div>
-          <h3>CloudOps Automation</h3>
-          <p>Self-healing CI/CD pipelines with automated infrastructure provisioning and monitoring.</p>
-          <div class="tag-row"><span>DevOps</span><span>Kubernetes</span><span>IaC</span></div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-status status-progress">In Progress</div>
-          <h3>DataVault Platform</h3>
-          <p>A secure, high-performance data warehouse with real-time analytics dashboards.</p>
-          <div class="tag-row"><span>Databases</span><span>Analytics</span><span>Security</span></div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-status status-research">Research</div>
-          <h3>Smart Assist Bot</h3>
-          <p>A generative AI assistant for customer support with multi-language understanding.</p>
-          <div class="tag-row"><span>GenAI</span><span>NLP</span><span>Python</span></div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-status status-queue">In Queue</div>
-          <h3>Vision Quality Check</h3>
-          <p>Computer-vision powered quality inspection system for manufacturing lines.</p>
-          <div class="tag-row"><span>Computer Vision</span><span>AI</span><span>Edge</span></div>
-        </article>
+      <div class="achieve-grid">
+        <div class="achieve-card glass tilt reveal">
+          <div class="achieve-num" data-count="20" data-suffix="+">0</div>
+          <p>Team Members</p>
+        </div>
+        <div class="achieve-card glass tilt reveal">
+          <div class="achieve-num" data-count="5" data-suffix="+">0</div>
+          <p>Production Projects</p>
+        </div>
+        <div class="achieve-card glass tilt reveal">
+          <div class="achieve-num" data-count="10" data-suffix="+">0</div>
+          <p>AI Integrations</p>
+        </div>
+        <div class="achieve-card glass tilt reveal">
+          <div class="achieve-num" data-count="15" data-suffix="+">0</div>
+          <p>Cloud Deployments</p>
+        </div>
+        <div class="achieve-card glass tilt reveal">
+          <div class="achieve-num" data-count="8" data-suffix="+">0</div>
+          <p>Enterprise Solutions</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ TEAM / LEADERSHIP ============ -->
-  <section class="section team" id="team">
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="section why" id="why">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">Meet The Founders</span>
-        <h2 class="section-title">Our <span class="gradient-text">Leadership</span></h2>
-        <p class="section-lead">The minds steering CodeOrigin.Ai toward the future.</p>
+        <span class="eyebrow">Why CodeOrigin.Ai</span>
+        <h2 class="section-title">Why <span class="gradient-text">Choose Us</span></h2>
       </div>
-
-      <div class="team-grid">
-        <article class="team-card reveal">
-          <div class="avatar" data-initials="RN"></div>
-          <h3>Raghavanedra N</h3>
-          <span class="role role-ceo">Chief Executive Officer</span>
-          <p>Visionary leader driving the company's strategy, growth and culture of innovation.</p>
-          <div class="social-row">
-            <a href="#" aria-label="LinkedIn" class="social">in</a>
-            <a href="#" aria-label="Email" class="social">@</a>
-          </div>
-        </article>
-
-        <article class="team-card reveal team-featured">
-          <div class="avatar" data-initials="RS"></div>
-          <h3>Rakshith S</h3>
-          <span class="role role-cfo">CFO &amp; CMO</span>
-          <p>Leads finance and marketing — aligning growth, brand and sustainable business strategy.</p>
-          <div class="social-row">
-            <a href="#" aria-label="LinkedIn" class="social">in</a>
-            <a href="#" aria-label="Email" class="social">@</a>
-          </div>
-        </article>
-
-        <article class="team-card reveal">
-          <div class="avatar" data-initials="R"></div>
-          <h3>Ramesh</h3>
-          <span class="role role-cto">Chief Technology Officer</span>
-          <p>Heads engineering and technology — architecting scalable, intelligent systems.</p>
-          <div class="social-row">
-            <a href="#" aria-label="LinkedIn" class="social">in</a>
-            <a href="#" aria-label="Email" class="social">@</a>
-          </div>
-        </article>
+      <div class="why-grid" id="whyGrid">
+        <!-- cards injected by JS -->
       </div>
-
-      <p class="team-note reveal">Backed by a talented team of <strong>20+ engineers, designers and innovators.</strong></p>
     </div>
   </section>
 
@@ -337,17 +341,20 @@
       <div class="contact-info reveal">
         <span class="eyebrow">Let's Build Together</span>
         <h2 class="section-title">Have a project in <span class="gradient-text">mind?</span></h2>
-        <p>Whether you need advanced engineering, AI integration or a cloud transformation —
-          our team is ready to help bring your vision to life.</p>
+        <p>Partner with <strong>CodeOrigin.Ai</strong> for enterprise software, AI integration and cloud transformation.</p>
 
         <ul class="contact-list">
-          <li><span class="ci">✉️</span> hello@codeorigin.ai</li>
-          <li><span class="ci">📞</span> +91 00000 00000</li>
-          <li><span class="ci">📍</span> India · Remote-first</li>
+          <li><span class="ci">🏢</span><div><span class="ci-k">Company</span><span class="ci-v">CodeOrigin.Ai</span></div></li>
+          <li><span class="ci">✉️</span><div><span class="ci-k">Business Email</span><a class="ci-v" href="mailto:hello@codeoriginai.com">hello@codeoriginai.com</a></div></li>
+          <li><span class="ci">📞</span><div><span class="ci-k">Phone</span><a class="ci-v" href="tel:+917892177297">078921 77297</a></div></li>
+          <li><span class="ci">📍</span><div><span class="ci-k">Location</span><span class="ci-v">Kotla Arcade, opposite Gurukula English Medium School, CK Pura, Chitradurga, Karnataka 577501</span></div></li>
+          <li><span class="ci">🌐</span><div><span class="ci-k">Website</span><a class="ci-v" href="https://www.codeoriginai.com" target="_blank" rel="noopener">www.codeoriginai.com</a></div></li>
+          <li><span class="ci">in</span><div><span class="ci-k">LinkedIn</span><a class="ci-v" href="#">linkedin.com/company/codeoriginai</a></div></li>
+          <li><span class="ci">🐙</span><div><span class="ci-k">GitHub</span><a class="ci-v" href="#">github.com/codeoriginai</a></div></li>
         </ul>
       </div>
 
-      <form class="contact-form reveal" id="contactForm" novalidate>
+      <form class="contact-form glass reveal" id="contactForm" novalidate>
         <div class="field">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -372,40 +379,52 @@
       <div class="footer-brand">
         <a href="#home" class="brand">
           <span class="brand-mark">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
+            <svg class="logo-mark" viewBox="0 0 140 80" width="44" height="25" role="img" aria-label="CodeOrigin.ai logo">
+              <defs>
+                <linearGradient id="coGoldFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f7e3a1"/>
+                  <stop offset="45%" stop-color="#e6c25a"/>
+                  <stop offset="100%" stop-color="#b8860b"/>
+                </linearGradient>
+              </defs>
+              <path d="M54 9 L26 9 L4 40 L26 71 L54 71 L32 40 Z" fill="url(#coGoldFoot)"/>
+              <path d="M118 23 A21 21 0 1 0 118 57" fill="none" stroke="url(#coGoldFoot)" stroke-width="9" stroke-linecap="round"/>
+              <g fill="url(#coGoldFoot)" stroke="url(#coGoldFoot)" stroke-width="3.5" stroke-linecap="round">
+                <line x1="104" y1="40" x2="124" y2="40"/><circle cx="130" cy="40" r="4.5" stroke="none"/>
+                <line x1="108" y1="30" x2="120" y2="24"/><circle cx="125" cy="21" r="4.5" stroke="none"/>
+                <line x1="108" y1="50" x2="120" y2="56"/><circle cx="125" cy="59" r="4.5" stroke="none"/>
+              </g>
             </svg>
           </span>
-          <span class="brand-text">CodeOrigin<span class="brand-ai">.Ai</span></span>
+          <span class="brand-text"><span class="brand-gold">Code</span>Origin<span class="brand-dot">.ai</span></span>
         </a>
-        <p>Engineering the future with code &amp; intelligence.</p>
+        <p>Building Intelligent Software For The Future.</p>
       </div>
 
       <div class="footer-cols">
         <div class="footer-col">
           <h5>Company</h5>
-          <a href="#about">About</a>
-          <a href="#team">Leadership</a>
+          <a href="#about">Overview</a>
+          <a href="#team">Team</a>
           <a href="#projects">Projects</a>
         </div>
         <div class="footer-col">
           <h5>Expertise</h5>
-          <a href="#services">Advanced Java</a>
-          <a href="#services">AI / ML</a>
-          <a href="#services">Cloud DevOps</a>
+          <a href="#stack">Tech Stack</a>
+          <a href="#services">Services</a>
+          <a href="#infra">Infrastructure</a>
         </div>
         <div class="footer-col">
           <h5>Connect</h5>
           <a href="#contact">Contact</a>
+          <a href="https://www.codeoriginai.com" target="_blank" rel="noopener">Website</a>
           <a href="#">LinkedIn</a>
-          <a href="#">Twitter / X</a>
         </div>
       </div>
     </div>
     <div class="container footer-bottom">
       <p>© <span id="year"></span> CodeOrigin.Ai — All rights reserved.</p>
-      <p>Built with passion 💙 by the CodeOrigin team.</p>
+      <p class="footer-tag gradient-text">Building Intelligent Software For The Future</p>
     </div>
   </footer>
 
