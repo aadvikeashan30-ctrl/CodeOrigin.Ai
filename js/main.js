@@ -234,6 +234,132 @@
   }
 
   /* =========================================================
+     ADDED CONTENT: marquee, process, timeline, testimonials, FAQ
+     ========================================================= */
+
+  // ---- Tech marquee ----
+  var MARQUEE = [
+    "⚛️ React", "▲ Next.js", "🟢 Node.js", "🐍 Python", "⚡ FastAPI", "☁️ AWS",
+    "🐳 Docker", "☸️ Kubernetes", "🧠 OpenAI", "🍃 MongoDB", "🐘 PostgreSQL",
+    "📘 TypeScript", "🔺 Terraform", "🔁 CI/CD", "📊 Grafana", "🚀 DevOps"
+  ];
+  var marqueeTrack = document.getElementById("marqueeTrack");
+  if (marqueeTrack) {
+    // duplicate the list so the loop is seamless
+    var seq = MARQUEE.concat(MARQUEE);
+    marqueeTrack.innerHTML = seq.map(function (m) {
+      var parts = m.split(" ");
+      return '<span class="marquee-item"><span>' + parts[0] + "</span>" + parts.slice(1).join(" ") + "</span>";
+    }).join("");
+  }
+
+  // ---- Process / How we work ----
+  var PROCESS = [
+    { icon: "🔍", title: "Discover",  desc: "We learn your goals, users and constraints to define the right scope." },
+    { icon: "🎨", title: "Design",    desc: "Architecture, UX and prototypes that align with your vision." },
+    { icon: "⚙️", title: "Develop",   desc: "Agile sprints with clean, tested, scalable code and demos." },
+    { icon: "🚀", title: "Deploy",    desc: "Automated CI/CD to secure, cloud-native production infrastructure." },
+    { icon: "🛠️", title: "Support",   desc: "Monitoring, optimization and continuous improvement post-launch." }
+  ];
+  var processGrid = document.getElementById("processGrid");
+  if (processGrid) {
+    PROCESS.forEach(function (s, i) {
+      var card = el(
+        '<article class="process-card glass tilt reveal delay-' + ((i % 4) + 1) + '">' +
+          '<div class="process-step-no">' + (i + 1) + "</div>" +
+          '<div class="pc-icon">' + s.icon + "</div>" +
+          "<h3>" + s.title + "</h3>" +
+          "<p>" + s.desc + "</p>" +
+        "</article>"
+      );
+      processGrid.appendChild(card);
+    });
+  }
+
+  // ---- Journey / timeline ----
+  var JOURNEY = [
+    { year: "2024", title: "CodeOrigin.Ai Founded", desc: "Launched in Chitradurga, Karnataka with a mission to build intelligent software." },
+    { year: "2024", title: "First Enterprise Projects", desc: "Delivered KSRA and Parxcel — our first production platforms." },
+    { year: "2025", title: "AI & Cloud Expansion", desc: "Added AI engineering, RAG systems and cloud-native DevOps capabilities." },
+    { year: "2025", title: "Team Grows to 23", desc: "Scaled to a multidisciplinary team across engineering, AI, design and operations." },
+    { year: "2026", title: "Scaling New Heights", desc: "Expanding our portfolio with AI-driven enterprise solutions for a global market." }
+  ];
+  var timeline = document.getElementById("timeline");
+  if (timeline) {
+    JOURNEY.forEach(function (t) {
+      var item = el(
+        '<div class="tl-item reveal">' +
+          '<div class="tl-year">' + t.year + "</div>" +
+          '<div class="tl-card glass tilt"><h3>' + t.title + "</h3><p>" + t.desc + "</p></div>" +
+        "</div>"
+      );
+      timeline.appendChild(item);
+    });
+  }
+
+  // ---- Testimonials ----
+  var TESTIMONIALS = [
+    { name: "Anil Kumar",     role: "Founder, Retail Startup",   text: "CodeOrigin.Ai delivered our platform ahead of schedule and the quality was outstanding. A truly reliable engineering partner." },
+    { name: "Priyanka Shetty",role: "Operations Head, Logistics",text: "Their logistics solution transformed how we track deliveries. The team understood our business deeply." },
+    { name: "Dr. Rakesh M",   role: "Director, Healthcare",      text: "The hospital management ecosystem they built is intuitive, secure and scalable. Highly recommended." }
+  ];
+  var testimonialGrid = document.getElementById("testimonialGrid");
+  if (testimonialGrid) {
+    TESTIMONIALS.forEach(function (t, i) {
+      var initials = t.name.split(" ").map(function (n) { return n[0]; }).join("").slice(0, 2).toUpperCase();
+      var card = el(
+        '<article class="testimonial-card glass tilt reveal delay-' + (i + 1) + '">' +
+          '<div class="quote">&ldquo;</div>' +
+          '<div class="stars">★★★★★</div>' +
+          "<p>" + t.text + "</p>" +
+          '<div class="testimonial-meta">' +
+            '<div class="testimonial-avatar">' + initials + "</div>" +
+            '<div class="testimonial-who"><b>' + t.name + "</b><span>" + t.role + "</span></div>" +
+          "</div>" +
+        "</article>"
+      );
+      testimonialGrid.appendChild(card);
+    });
+  }
+
+  // ---- FAQ ----
+  var FAQ = [
+    { q: "What services does CodeOrigin.Ai offer?", a: "We build web & mobile applications, enterprise software, AI/ML systems, cloud infrastructure, DevOps automation, API and SaaS products — end to end." },
+    { q: "Which technologies do you work with?", a: "Our stack spans React, Next.js, Node.js, Python, FastAPI, MongoDB, PostgreSQL, OpenAI/LLMs, AWS, Docker, Kubernetes and more." },
+    { q: "How big is your team?", a: "We are a 23-member team of engineers, AI specialists, designers, QA and project managers led by our CEO, CTO and CFO/CMO." },
+    { q: "Do you provide ongoing support and maintenance?", a: "Yes. After launch we provide monitoring, optimization, security updates and continuous improvement through our Support phase." },
+    { q: "How can I start a project with you?", a: "Reach out via the contact form, email hello@codeoriginai.com, or call 078921 77297 and we'll schedule a discovery call." }
+  ];
+  var faqList = document.getElementById("faqList");
+  if (faqList) {
+    FAQ.forEach(function (f) {
+      var item = el(
+        '<div class="faq-item reveal">' +
+          '<button class="faq-q" type="button">' + f.q + '<span class="faq-plus">+</span></button>' +
+          '<div class="faq-a"><p>' + f.a + "</p></div>" +
+        "</div>"
+      );
+      faqList.appendChild(item);
+    });
+    faqList.addEventListener("click", function (e) {
+      var btn = e.target.closest(".faq-q");
+      if (!btn) return;
+      var item = btn.parentElement;
+      var answer = item.querySelector(".faq-a");
+      var isOpen = item.classList.contains("open");
+      // close all
+      faqList.querySelectorAll(".faq-item").forEach(function (it) {
+        it.classList.remove("open");
+        it.querySelector(".faq-a").style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add("open");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  }
+
+  /* =========================================================
      TEAM PHOTO GALLERY — resilient image loading
      Tries multiple file extensions so any uploaded format works.
      Just add images/team-photo-1.* and images/team-photo-2.*
@@ -276,12 +402,53 @@
      NAVBAR SCROLL STATE + MOBILE TOGGLE
      ========================================================= */
   var navbar = document.getElementById("navbar");
+  var scrollProgress = document.getElementById("scrollProgress");
+  var toTop = document.getElementById("toTop");
   function onScroll() {
     if (window.scrollY > 30) navbar.classList.add("scrolled");
     else navbar.classList.remove("scrolled");
+
+    // scroll progress bar
+    if (scrollProgress) {
+      var h = document.documentElement;
+      var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+      scrollProgress.style.width = scrolled + "%";
+    }
+    // back to top visibility
+    if (toTop) {
+      if (window.scrollY > 600) toTop.classList.add("show");
+      else toTop.classList.remove("show");
+    }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* =========================================================
+     HERO TYPED ROTATOR
+     ========================================================= */
+  var typedEl = document.getElementById("typed");
+  if (typedEl) {
+    var WORDS = ["Web Applications", "Mobile Apps", "AI Solutions", "Cloud Infrastructure", "Enterprise Software", "DevOps Pipelines"];
+    var wi = 0, ci = 0, deleting = false;
+    function tick() {
+      var word = WORDS[wi];
+      if (!deleting) {
+        typedEl.textContent = word.slice(0, ++ci);
+        if (ci === word.length) { deleting = true; setTimeout(tick, 1400); return; }
+      } else {
+        typedEl.textContent = word.slice(0, --ci);
+        if (ci === 0) { deleting = false; wi = (wi + 1) % WORDS.length; }
+      }
+      setTimeout(tick, deleting ? 45 : 90);
+    }
+    tick();
+  }
 
   var navToggle = document.getElementById("navToggle");
   var navLinks = document.getElementById("navLinks");

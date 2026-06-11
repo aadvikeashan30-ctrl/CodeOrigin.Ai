@@ -16,6 +16,9 @@
 </head>
 <body>
 
+  <!-- scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- ============ LOADER ============ -->
   <div class="loader" id="loader">
     <div class="loader-logo">
@@ -82,7 +85,8 @@
         <a href="#team" class="nav-link">Team</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#stack" class="nav-link">Tech</a>
-        <a href="#services" class="nav-link">Services</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
         <a href="#contact" class="nav-link nav-cta">Contact</a>
       </nav>
 
@@ -107,6 +111,7 @@
           <strong>Cloud Infrastructure</strong>, <strong>Artificial Intelligence</strong>,
           <strong>Enterprise Software Solutions</strong>, and <strong>Modern DevOps Practices</strong>.
         </p>
+        <div class="hero-typed">We engineer <span class="typed gradient-text" id="typed"></span><span class="caret">|</span></div>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">Explore Our Work</a>
           <a href="#contact" class="btn btn-ghost">Get in Touch →</a>
@@ -165,6 +170,13 @@
       </div>
     </div>
     <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ============ TECH MARQUEE ============ -->
+  <section class="marquee-band" aria-label="Technologies we use">
+    <div class="marquee">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
   </section>
 
   <!-- ============ COMPANY OVERVIEW ============ -->
@@ -306,6 +318,20 @@
     </div>
   </section>
 
+  <!-- ============ PROCESS ============ -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">How We Work</span>
+        <h2 class="section-title">Our Development <span class="gradient-text">Process</span></h2>
+        <p class="section-lead">A proven, transparent workflow from idea to launch and beyond.</p>
+      </div>
+      <div class="process-grid" id="processGrid">
+        <!-- steps injected by JS -->
+      </div>
+    </div>
+  </section>
+
   <!-- ============ ACHIEVEMENTS ============ -->
   <section class="section achievements" id="achievements">
     <div class="container">
@@ -338,6 +364,20 @@
     </div>
   </section>
 
+  <!-- ============ JOURNEY / TIMELINE ============ -->
+  <section class="section journey" id="journey">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="section-title">The CodeOrigin.Ai <span class="gradient-text">Journey</span></h2>
+        <p class="section-lead">From a bold idea to a thriving 23-member engineering company.</p>
+      </div>
+      <div class="timeline" id="timeline">
+        <!-- items injected by JS -->
+      </div>
+    </div>
+  </section>
+
   <!-- ============ WHY CHOOSE US ============ -->
   <section class="section why" id="why">
     <div class="container">
@@ -347,6 +387,33 @@
       </div>
       <div class="why-grid" id="whyGrid">
         <!-- cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Client Voices</span>
+        <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
+        <p class="section-lead">Trusted by businesses to deliver software that performs.</p>
+      </div>
+      <div class="testimonial-grid" id="testimonialGrid">
+        <!-- cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq" id="faq">
+    <div class="container faq-container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Questions</span>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <!-- items injected by JS -->
       </div>
     </div>
   </section>
@@ -389,6 +456,9 @@
     </div>
   </section>
 
+  <!-- back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -428,13 +498,15 @@
           <h5>Expertise</h5>
           <a href="#stack">Tech Stack</a>
           <a href="#services">Services</a>
+          <a href="#process">Our Process</a>
           <a href="#infra">Infrastructure</a>
         </div>
         <div class="footer-col">
           <h5>Connect</h5>
+          <a href="#testimonials">Reviews</a>
+          <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
           <a href="https://www.codeoriginai.com" target="_blank" rel="noopener">Website</a>
-          <a href="#">LinkedIn</a>
         </div>
       </div>
     </div>
