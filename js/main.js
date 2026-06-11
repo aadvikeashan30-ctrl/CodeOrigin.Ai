@@ -130,7 +130,7 @@
       var tags = p.tech.map(function (t) { return "<span>" + t + "</span>"; }).join("");
       var card = el(
         '<article class="project-card glass tilt reveal">' +
-          '<div class="project-banner" style="background:linear-gradient(135deg,rgba(45,212,255,0.25),rgba(177,92,255,0.25));">' +
+          '<div class="project-banner" style="background:linear-gradient(135deg,rgba(245,185,66,0.28),rgba(168,85,247,0.28));">' +
             '<span class="project-status ' + statusClass(p.status) + '">' + p.status + "</span>" +
             "<span>" + p.icon + "</span>" +
           "</div>" +
@@ -404,7 +404,7 @@
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(130, 180, 255, 0.6)";
+        ctx.fillStyle = "rgba(245, 185, 66, 0.6)";
         ctx.fill();
 
         // links
@@ -416,7 +416,7 @@
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = "rgba(100, 150, 255, " + (0.14 * (1 - dist / 130)).toFixed(3) + ")";
+            ctx.strokeStyle = "rgba(200, 132, 252, " + (0.16 * (1 - dist / 130)).toFixed(3) + ")";
             ctx.lineWidth = 1;
             ctx.stroke();
           }
