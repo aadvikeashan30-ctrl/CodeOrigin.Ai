@@ -34,13 +34,23 @@
     { name: "Anushree",            role: "Jr Software Developer", email: "anushree@codeoriginai.com" }
   ];
 
-  // ---- Projects ----
+  // ---- Projects (each has a themed SVG illustration: c1/c2 gradient + art) ----
   var PROJECTS = [
-    { name: "KSRA",                 icon: "🏢", desc: "Enterprise business management platform.",            tech: ["React", "Node.js", "PostgreSQL"], status: "Live",        cloud: "AWS EC2 + S3" },
-    { name: "Parxcel",              icon: "📦", desc: "Parcel and logistics management platform.",            tech: ["Next.js", "Express.js", "MongoDB"], status: "Live",        cloud: "AWS + Docker" },
-    { name: "Doctor Pro",           icon: "🩺", desc: "Hospital, clinic and doctor management ecosystem.",    tech: ["React", "FastAPI", "PostgreSQL"],   status: "In Progress", cloud: "Kubernetes + AWS" },
-    { name: "AI Recruitment System",icon: "🤖", desc: "Automated candidate screening and hiring platform.",   tech: ["Python", "OpenAI", "Vector DB"],    status: "Beta",        cloud: "AWS + Docker" },
-    { name: "Smart Inventory",      icon: "📊", desc: "Inventory and stock management platform.",             tech: ["Next.js", "Node.js", "MySQL"],      status: "Live",        cloud: "AWS EC2 + NGINX" }
+    { name: "KSRA",                 icon: "🏢", desc: "Enterprise business management platform.",            tech: ["React", "Node.js", "PostgreSQL"], status: "Live",        cloud: "AWS EC2 + S3",
+      c1: "#f5b942", c2: "#a855f7",
+      art: '<rect x="150" y="74" width="42" height="66" rx="4"/><line x1="160" y1="88" x2="182" y2="88"/><line x1="160" y1="102" x2="182" y2="102"/><line x1="160" y1="116" x2="182" y2="116"/><rect x="210" y="104" width="14" height="36" fill="rgba(255,255,255,0.85)" stroke="none"/><rect x="230" y="86" width="14" height="54" fill="rgba(255,255,255,0.7)" stroke="none"/><rect x="250" y="66" width="14" height="74" fill="rgba(255,255,255,0.92)" stroke="none"/><polyline points="210,100 230,82 250,62" />' },
+    { name: "Parxcel",              icon: "📦", desc: "Parcel and logistics management platform.",            tech: ["Next.js", "Express.js", "MongoDB"], status: "Live",        cloud: "AWS + Docker",
+      c1: "#34d399", c2: "#6366f1",
+      art: '<path d="M150 88 L185 72 L220 88 L220 124 L185 140 L150 124 Z"/><line x1="150" y1="88" x2="185" y2="104"/><line x1="220" y1="88" x2="185" y2="104"/><line x1="185" y1="104" x2="185" y2="140"/><circle cx="240" cy="118" r="13"/><circle cx="240" cy="118" r="4" fill="rgba(255,255,255,0.9)" stroke="none"/><path d="M240 131 q12 -4 12 -16" stroke-dasharray="4 5"/>' },
+    { name: "Doctor Pro",           icon: "🩺", desc: "Hospital, clinic and doctor management ecosystem.",    tech: ["React", "FastAPI", "PostgreSQL"],   status: "In Progress", cloud: "Kubernetes + AWS",
+      c1: "#22d3ee", c2: "#f472b6",
+      art: '<rect x="182" y="58" width="40" height="40" rx="8"/><line x1="202" y1="66" x2="202" y2="90"/><line x1="190" y1="78" x2="214" y2="78"/><polyline points="146,128 174,128 184,110 196,150 208,124 230,124 258,124"/>' },
+    { name: "AI Recruitment System",icon: "🤖", desc: "Automated candidate screening and hiring platform.",   tech: ["Python", "OpenAI", "Vector DB"],    status: "Beta",        cloud: "AWS + Docker",
+      c1: "#f5b942", c2: "#ec4899",
+      art: '<line x1="200" y1="56" x2="200" y2="68"/><circle cx="200" cy="52" r="4" fill="rgba(255,255,255,0.9)" stroke="none"/><rect x="170" y="70" width="60" height="48" rx="10"/><circle cx="186" cy="92" r="5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="214" cy="92" r="5" fill="rgba(255,255,255,0.9)" stroke="none"/><line x1="184" y1="118" x2="184" y2="130"/><line x1="216" y1="118" x2="216" y2="130"/><circle cx="244" cy="120" r="13"/><line x1="253" y1="129" x2="264" y2="140"/>' },
+    { name: "Smart Inventory",      icon: "📊", desc: "Inventory and stock management platform.",             tech: ["Next.js", "Node.js", "MySQL"],      status: "Live",        cloud: "AWS EC2 + NGINX",
+      c1: "#a855f7", c2: "#22d3ee",
+      art: '<line x1="150" y1="84" x2="262" y2="84"/><line x1="150" y1="112" x2="262" y2="112"/><line x1="150" y1="140" x2="262" y2="140"/><rect x="158" y="64" width="20" height="20" fill="rgba(255,255,255,0.85)" stroke="none"/><rect x="184" y="64" width="20" height="20" fill="rgba(255,255,255,0.55)" stroke="none"/><rect x="172" y="92" width="20" height="20" fill="rgba(255,255,255,0.7)" stroke="none"/><rect x="210" y="92" width="20" height="20" fill="rgba(255,255,255,0.9)" stroke="none"/><rect x="236" y="120" width="20" height="20" fill="rgba(255,255,255,0.75)" stroke="none"/>' }
   ];
 
   // ---- Tech stack categories ----
@@ -126,13 +136,28 @@
   // Projects
   var projectGrid = document.getElementById("projectGrid");
   if (projectGrid) {
-    PROJECTS.forEach(function (p) {
+    PROJECTS.forEach(function (p, idx) {
       var tags = p.tech.map(function (t) { return "<span>" + t + "</span>"; }).join("");
+      var gid = "pg" + idx;
+      var banner =
+        '<svg class="proj-art" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">' +
+          '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="1" y2="1">' +
+            '<stop offset="0" stop-color="' + p.c1 + '"/><stop offset="1" stop-color="' + p.c2 + '"/>' +
+          '</linearGradient></defs>' +
+          '<rect width="400" height="200" fill="url(#' + gid + ')"/>' +
+          '<g opacity="0.18" stroke="#fff" stroke-width="1">' +
+            '<line x1="0" y1="50" x2="400" y2="50"/><line x1="0" y1="100" x2="400" y2="100"/><line x1="0" y1="150" x2="400" y2="150"/>' +
+            '<line x1="100" y1="0" x2="100" y2="200"/><line x1="200" y1="0" x2="200" y2="200"/><line x1="300" y1="0" x2="300" y2="200"/>' +
+          '</g>' +
+          '<circle cx="60" cy="44" r="30" fill="#fff" opacity="0.08"/><circle cx="350" cy="160" r="44" fill="#fff" opacity="0.07"/>' +
+          '<g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">' + p.art + '</g>' +
+        '</svg>';
       var card = el(
         '<article class="project-card glass tilt reveal">' +
-          '<div class="project-banner" style="background:linear-gradient(135deg,rgba(245,185,66,0.28),rgba(168,85,247,0.28));">' +
+          '<div class="project-banner">' +
+            banner +
             '<span class="project-status ' + statusClass(p.status) + '">' + p.status + "</span>" +
-            "<span>" + p.icon + "</span>" +
+            '<span class="proj-emoji">' + p.icon + "</span>" +
           "</div>" +
           '<div class="project-body">' +
             "<h3>" + p.name + "</h3>" +

@@ -266,23 +266,24 @@ img { max-width: 100%; display: block; }
 .gallery-card figcaption span { font-size: 1.2rem; }
 /* polished branded fallback when the photo file is missing */
 .gallery-card.photo-missing::before {
-  content: "</>";
-  position: absolute; inset: 0 0 auto; top: 26%; z-index: 1;
-  text-align: center; font-family: var(--font-mono); font-size: 3rem; font-weight: 700;
-  background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-  opacity: 0.9;
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: center 40% / 58% no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cg fill='%23ffffff' opacity='0.18'%3E%3Ccircle cx='120' cy='128' r='26'/%3E%3Crect x='90' y='156' width='60' height='86' rx='28'/%3E%3Ccircle cx='200' cy='114' r='31'/%3E%3Crect x='165' y='148' width='70' height='96' rx='33'/%3E%3Ccircle cx='285' cy='130' r='26'/%3E%3Crect x='255' y='158' width='60' height='86' rx='28'/%3E%3C/g%3E%3C/svg%3E");
 }
 .gallery-card.photo-missing::after {
   content: "📷  Team photo — upload to images/ folder";
-  position: absolute; inset: auto 0 42%; z-index: 1; text-align: center;
-  color: var(--muted); font-size: 0.82rem; letter-spacing: 0.02em;
+  position: absolute; inset: auto 0 18%; z-index: 2; text-align: center;
+  color: rgba(255,255,255,0.7); font-size: 0.82rem; letter-spacing: 0.02em;
 }
 
 /* ===================== PROJECTS ===================== */
 .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .project-card { border-radius: var(--radius); overflow: hidden; position: relative; }
-.project-banner { height: 130px; display: grid; place-items: center; font-size: 3rem; position: relative; overflow: hidden; }
-.project-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent, rgba(8,10,24,0.7)); }
+.project-banner { height: 165px; position: relative; overflow: hidden; display: grid; place-items: center; }
+.proj-art { position: absolute; inset: 0; width: 100%; height: 100%; }
+.project-banner::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(8,6,14,0.05), rgba(8,6,14,0.78)); }
+.proj-emoji { position: relative; z-index: 2; font-size: 3rem; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55)); transition: transform 0.4s ease; }
+.project-card:hover .proj-emoji { transform: scale(1.12) translateY(-4px); }
+.project-card:hover .proj-art { transform: scale(1.05); transition: transform 0.6s ease; }
 .project-body { padding: 1.5rem 1.5rem 1.7rem; }
 .project-status { position: absolute; top: 14px; right: 14px; z-index: 2; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 999px; backdrop-filter: blur(6px); }
 .status-live { background: rgba(80,250,123,0.16); color: #50fa7b; border: 1px solid rgba(80,250,123,0.4); }
