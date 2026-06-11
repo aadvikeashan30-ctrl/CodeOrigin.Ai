@@ -12,6 +12,9 @@
   // ---- Team directory (20 members) ----
   // To update: edit name / role / email below. Table re-renders automatically.
   var TEAM = [
+    { name: "Raghavendra N",       role: "CEO",                   email: "raghavendra@codeoriginai.com" },
+    { name: "Rakshith S",          role: "CFO / CMO",             email: "rakshith@codeoriginai.com" },
+    { name: "Ramesh",              role: "CTO",                   email: "ramesh@codeoriginai.com" },
     { name: "Varshini CM",         role: "Project Manager",       email: "varshini@codeoriginai.com" },
     { name: "Amogha Varshini PM",  role: "Team Lead",             email: "amogha@codeoriginai.com" },
     { name: "Ayesha Siddiqa R",    role: "Team Lead",             email: "ayesha@codeoriginai.com" },
