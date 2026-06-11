@@ -206,6 +206,31 @@
   }
 
   /* =========================================================
+     TEAM PHOTO GALLERY — resilient image loading
+     Tries multiple file extensions so any uploaded format works.
+     Just add images/team-photo-1.* and images/team-photo-2.*
+     ========================================================= */
+  (function loadGalleryPhotos() {
+    var EXTS = ["jpg", "jpeg", "png", "webp", "JPG", "PNG"];
+    document.querySelectorAll(".gallery-card img[data-photo]").forEach(function (img) {
+      var base = img.getAttribute("data-photo");
+      var i = 0;
+      function tryNext() {
+        if (i >= EXTS.length) {
+          // no file found in any format -> show styled placeholder
+          var card = img.closest(".gallery-card");
+          if (card) card.classList.add("photo-missing");
+          img.remove();
+          return;
+        }
+        img.src = "images/" + base + "." + EXTS[i++];
+      }
+      img.addEventListener("error", tryNext);
+      tryNext();
+    });
+  })();
+
+  /* =========================================================
      LOADER
      ========================================================= */
   window.addEventListener("load", function () {
