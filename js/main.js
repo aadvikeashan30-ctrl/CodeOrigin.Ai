@@ -12,26 +12,26 @@
   // ---- Team directory (20 members) ----
   // To update: edit name / role / email below. Table re-renders automatically.
   var TEAM = [
-    { name: "Raghavanedra N",   role: "CEO",                        email: "raghavanedra@codeoriginai.com" },
-    { name: "Ramesh",           role: "CTO",                        email: "ramesh@codeoriginai.com" },
-    { name: "Rakshith S",       role: "Technical Architect",        email: "rakshith@codeoriginai.com" },
-    { name: "Aditya Sharma",    role: "Senior Full Stack Developer",email: "aditya@codeoriginai.com" },
-    { name: "Priya Nair",       role: "Frontend Developer",         email: "priya@codeoriginai.com" },
-    { name: "Karthik Reddy",    role: "Backend Developer",          email: "karthik@codeoriginai.com" },
-    { name: "Sneha Patil",      role: "React Developer",            email: "sneha@codeoriginai.com" },
-    { name: "Arjun Menon",      role: "Next.js Developer",          email: "arjun@codeoriginai.com" },
-    { name: "Vivek Kumar",      role: "Node.js Developer",          email: "vivek@codeoriginai.com" },
-    { name: "Deepa Iyer",       role: "Python Developer",           email: "deepa@codeoriginai.com" },
-    { name: "Rohan Gupta",      role: "AI Engineer",                email: "rohan@codeoriginai.com" },
-    { name: "Ananya Rao",       role: "Machine Learning Engineer",  email: "ananya@codeoriginai.com" },
-    { name: "Sahil Khan",       role: "DevOps Engineer",            email: "sahil@codeoriginai.com" },
-    { name: "Meera Joshi",      role: "Cloud Engineer",             email: "meera@codeoriginai.com" },
-    { name: "Nikhil Verma",     role: "QA Engineer",                email: "nikhil@codeoriginai.com" },
-    { name: "Tanvi Desai",      role: "UI/UX Designer",             email: "tanvi@codeoriginai.com" },
-    { name: "Imran Sheikh",     role: "Mobile App Developer",       email: "imran@codeoriginai.com" },
-    { name: "Lakshmi Pillai",   role: "Database Administrator",     email: "lakshmi@codeoriginai.com" },
-    { name: "Varun Malhotra",   role: "Project Manager",            email: "varun@codeoriginai.com" },
-    { name: "Pooja Bhat",       role: "Business Analyst",           email: "pooja@codeoriginai.com" }
+    { name: "Varshini CM",         role: "Project Manager",       email: "varshini@codeoriginai.com" },
+    { name: "Amogha Varshini PM",  role: "Team Lead",             email: "amogha@codeoriginai.com" },
+    { name: "Ayesha Siddiqa R",    role: "Team Lead",             email: "ayesha@codeoriginai.com" },
+    { name: "Shreyas B Archarya",  role: "Team Lead",             email: "shreyas.acharya@codeoriginai.com" },
+    { name: "Bhaskar VB",          role: "Jr Software Developer", email: "bhaskar@codeoriginai.com" },
+    { name: "Vrushank S K",        role: "Jr Software Developer", email: "vrushank@codeoriginai.com" },
+    { name: "PruthviRaj",          role: "Jr Software Developer", email: "pruthviraj@codeoriginai.com" },
+    { name: "Sukruth J R",         role: "Jr Software Developer", email: "sukruth@codeoriginai.com" },
+    { name: "Vinaya S M",          role: "Jr Software Developer", email: "vinaya@codeoriginai.com" },
+    { name: "Mosseena",            role: "Sr Software Developer", email: "mosseena@codeoriginai.com" },
+    { name: "Naveen Kumar",        role: "Jr Software Developer", email: "naveen@codeoriginai.com" },
+    { name: "Nagarjun",            role: "Sr Software Developer", email: "nagarjun@codeoriginai.com" },
+    { name: "Anjum Kouser",        role: "Jr Software Developer", email: "anjum@codeoriginai.com" },
+    { name: "Bhumika",             role: "Jr Software Developer", email: "bhumika@codeoriginai.com" },
+    { name: "Gagana Priya",        role: "HR",                    email: "gagana@codeoriginai.com" },
+    { name: "Shreyas A",           role: "Jr Software Developer", email: "shreyas.a@codeoriginai.com" },
+    { name: "Sumanth",             role: "Jr Software Developer", email: "sumanth@codeoriginai.com" },
+    { name: "Sandesh Murthy",      role: "Jr Software Developer", email: "sandesh@codeoriginai.com" },
+    { name: "Manoj",               role: "Jr Software Developer", email: "manoj@codeoriginai.com" },
+    { name: "Anushree",            role: "Jr Software Developer", email: "anushree@codeoriginai.com" }
   ];
 
   // ---- Projects ----
