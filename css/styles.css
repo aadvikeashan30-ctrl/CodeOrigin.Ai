@@ -239,6 +239,40 @@ img { max-width: 100%; display: block; }
 .td-email a { color: var(--muted); transition: color 0.2s; }
 .td-email a:hover { color: var(--cyan); }
 
+/* ===================== TEAM PHOTO GALLERY ===================== */
+.gallery-head { text-align: center; margin: 3rem 0 1.8rem; }
+.team-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+.gallery-card {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  aspect-ratio: 4 / 3; box-shadow: var(--shadow);
+  background: linear-gradient(135deg, rgba(45,212,255,0.16), rgba(177,92,255,0.16));
+}
+.gallery-card img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.6s ease;
+}
+.gallery-card:hover img { transform: scale(1.06); }
+.gallery-card figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 2.4rem 1.4rem 1.2rem; color: #fff; font-family: var(--font-head);
+  font-weight: 600; font-size: 1rem;
+  background: linear-gradient(transparent, rgba(5,6,15,0.92));
+}
+.gallery-card figcaption span { font-size: 1.2rem; }
+/* graceful fallback when the photo file is missing */
+.gallery-card.photo-missing::before {
+  content: attr(data-fallback);
+  position: absolute; inset: 0; z-index: 1;
+  display: grid; place-content: center; text-align: center; padding: 2rem;
+  color: var(--muted); font-family: var(--font-head); font-weight: 600; font-size: 0.95rem;
+}
+.gallery-card.photo-missing::after {
+  content: "📷 Add photo to images/ folder";
+  position: absolute; inset: auto 0 38%; z-index: 1; text-align: center;
+  color: var(--cyan); font-size: 0.8rem; opacity: 0.8;
+}
+
 /* ===================== PROJECTS ===================== */
 .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .project-card { border-radius: var(--radius); overflow: hidden; position: relative; }
@@ -362,6 +396,7 @@ a.ci-v:hover { color: var(--cyan); }
   .hero-metrics { grid-template-columns: repeat(2, 1fr); }
   .overview-grid, .stack-grid, .service-grid, .why-grid, .project-grid { grid-template-columns: 1fr; }
   .achieve-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-gallery { grid-template-columns: 1fr; }
   .footer-cols { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .team-table { font-size: 0.84rem; }
